@@ -178,6 +178,16 @@ namespace WiFiBit {
     }
 
     /**
+    * Received string
+    ** @param dataStr dataStr, eg: "0"
+    */
+    //% block="Received string = %dataStr"
+    export function ReceivedString(dataStr: string): string  {
+        let targetstr: string = "\u000D\u000A" + "+IPD,0,1:" + dataStr + "\u000D\u000A"
+        return targetstr
+    }
+
+    /**
      * Line separator. It's used when headers or body are multiline.
      */
     //% weight=93
